@@ -1,4 +1,6 @@
-package store.management.system;
+package store.management.main;
+
+import store.management.system.Login;
 
 import javax.swing.*;
 import java.awt.*;

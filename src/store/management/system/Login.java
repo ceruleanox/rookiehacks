@@ -2,15 +2,16 @@ package store.management.system;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.*;
-import java.sql.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.sql.ResultSet;
 
 public class Login extends JFrame implements ActionListener {
 
     JTextField username, password;
     JButton login, cancel;
 
-    Login() {
+    public Login() {
         getContentPane().setBackground(Color.ORANGE);
 
         setBounds(500, 200, 600, 300);
