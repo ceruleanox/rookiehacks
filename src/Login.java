@@ -2,8 +2,13 @@ package store.management.system;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.*;
+import java.sql.*;
 
-public class Login extends JFrame {
+public class Login extends JFrame implements ActionListener {
+
+    JTextField username, password;
+    JButton login, cancel;
 
     Login() {
         getContentPane().setBackground(Color.ORANGE);
@@ -15,7 +20,7 @@ public class Login extends JFrame {
         user.setBounds(50, 20, 100, 30);
         add(user);
 
-        JTextField username = new JTextField();
+        username = new JTextField();
         username.setBounds( 150, 20, 150, 30);
         add(username);
 
@@ -23,22 +28,24 @@ public class Login extends JFrame {
         pw.setBounds(50, 80, 100, 30);
         add(pw);
 
-        JTextField password = new JTextField();
+        password = new JTextField();
         password.setBounds( 150, 80, 150, 30);
         add(password);
 
-        JButton login = new JButton("Login");
+        login = new JButton("Login");
         login.setBounds(50, 150, 120, 30);
         login.setBackground(Color.BLACK);
         login.setForeground(Color.WHITE);
         login.setFont(new Font("dialog", Font.BOLD, 20));
+        login.addActionListener(this);
         add(login);
 
-        JButton cancel = new JButton("Cancel");
+        cancel = new JButton("Cancel");
         cancel.setBounds(180, 150, 120, 30);
         cancel.setBackground(Color.BLACK);
         cancel.setForeground(Color.WHITE);
         cancel.setFont(new Font("dialog", Font.BOLD, 20));
+        cancel.addActionListener(this);
         add(cancel);
 
         ImageIcon login_auth = new ImageIcon(ClassLoader.getSystemResource("icons/login_authentication.png"));
@@ -49,6 +56,32 @@ public class Login extends JFrame {
         add(image);
 
         setVisible(true);
+    }
+
+    public void actionPerformed(ActionEvent ae) {
+        if (ae.getSource() == login) {
+
+            String user = username.getText();
+            String pw = password.getText();
+
+            try {
+                conn c = new conn();
+                String query = "select * from login where username = '" + user + "' and password = '" + pw + "'";
+                ResultSet rs = c.s.executeQuery(query);
+
+                if (rs.next()) {
+                    new Dashboard().setVisible(true);
+                    setVisible(false);
+                } else {
+                    JOptionPane.showMessageDialog(null, "Invalid username or password");
+                    setVisible(false);
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        } else if (ae.getSource() == cancel) {
+            setVisible(false);
+        }
     }
 
     public static void main(String[] args) {
