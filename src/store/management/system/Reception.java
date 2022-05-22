@@ -56,30 +56,35 @@ public class Reception extends JFrame {
         checkout.setForeground(Color.WHITE);
         add(checkout);
 
+        JButton itemStatus = new JButton("Item Status");
+        itemStatus.setBounds(10, 270, 200, 30);
+        itemStatus.setBackground(Color.BLACK);
+        itemStatus.setForeground(Color.WHITE);
+        add(itemStatus);
+
         JButton updateStatus = new JButton("Update Item Status");
-        updateStatus.setBounds(10, 270, 200, 30);
+        updateStatus.setBounds(10, 310, 200, 30);
         updateStatus.setBackground(Color.BLACK);
         updateStatus.setForeground(Color.WHITE);
         add(updateStatus);
 
         JButton pickupService = new JButton("Pickup Service");
-        pickupService.setBounds(10, 310, 200, 30);
+        pickupService.setBounds(10, 350, 200, 30);
         pickupService.setBackground(Color.BLACK);
         pickupService.setForeground(Color.WHITE);
         add(pickupService);
 
         JButton searchItem = new JButton("Search Item");
-        searchItem.setBounds(10, 310, 200, 30);
+        searchItem.setBounds(10, 390, 200, 30);
         searchItem.setBackground(Color.BLACK);
         searchItem.setForeground(Color.WHITE);
         add(searchItem);
 
         JButton logout = new JButton("Logout");
-        logout.setBounds(10, 350, 200, 30);
+        logout.setBounds(10, 430, 200, 30);
         logout.setBackground(Color.BLACK);
         logout.setForeground(Color.WHITE);
         add(logout);
-
 
         JLabel image = new JLabel(new ImageIcon(img));
         image.setBounds(250, 30, 500, 470);
