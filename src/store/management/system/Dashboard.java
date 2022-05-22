@@ -2,10 +2,12 @@ package store.management.system;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-public class Dashboard extends JFrame {
+public class Dashboard extends JFrame implements ActionListener{
 
-    Dashboard() {
+    public Dashboard() {
         setBounds(0, 0, 1300, 775);
         setLayout(null);
 
@@ -33,6 +35,7 @@ public class Dashboard extends JFrame {
         mb.add(admin);
 
         JMenuItem addEmployee = new JMenuItem("ADD EMPLOYEE");
+        addEmployee.addActionListener(openEmployeeScreen());
         admin.add(addEmployee);
 
         JMenuItem addItem = new JMenuItem("ADD ITEM");
@@ -42,6 +45,20 @@ public class Dashboard extends JFrame {
         admin.add(addBorrower);
 
         setVisible(true);
+    }
+
+    private ActionListener openEmployeeScreen() {
+        return new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                setVisible(false);
+                new addEmployees();
+            }
+        };
+    }
+
+    public void actionPerformed(ActionEvent ae) {
+
     }
 
     public static void main(String[] args) {
