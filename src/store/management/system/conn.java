@@ -17,4 +17,12 @@ public class conn {
             e.printStackTrace();
         }
     }
+
+    public void getItemNames() throws SQLException {
+        ResultSet rs = this.s.executeQuery("SELECT * from items");
+
+        if (rs.next()) {
+            
+        }
+    }
 }
