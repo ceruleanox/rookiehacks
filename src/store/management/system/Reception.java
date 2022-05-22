@@ -2,6 +2,8 @@ package store.management.system;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class Reception extends JFrame {
     public Reception() {
@@ -33,6 +35,7 @@ public class Reception extends JFrame {
         add(departments);
 
         JButton employees = new JButton("Employees");
+        employees.addActionListener(openEmployeeScreen());
         employees.setBounds(10, 150, 200, 30);
         employees.setBackground(Color.BLACK);
         employees.setForeground(Color.WHITE);
@@ -75,6 +78,7 @@ public class Reception extends JFrame {
         add(pickupService);
 
         JButton searchItem = new JButton("Search Item");
+        searchItem.addActionListener(openSearchScreen());
         searchItem.setBounds(10, 390, 200, 30);
         searchItem.setBackground(Color.BLACK);
         searchItem.setForeground(Color.WHITE);
@@ -92,6 +96,26 @@ public class Reception extends JFrame {
 
         setBounds(350, 200, 800, 570);
         setVisible(true);
+    }
+
+    private ActionListener openEmployeeScreen() {
+        return new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                setVisible(false);
+                new addEmployees();
+            }
+        };
+    }
+
+    private ActionListener openSearchScreen() {
+        return new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                setVisible(false);
+                new SearchItem();
+            }
+        };
     }
 
     public static void main(String[] args) {

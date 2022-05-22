@@ -28,6 +28,7 @@ public class Dashboard extends JFrame implements ActionListener{
         mb.add(store);
 
         JMenuItem reception = new JMenuItem("RECEPTION");
+        reception.addActionListener(openReceptionScreen());
         store.add(reception);
 
         JMenu admin = new JMenu("ADMIN");
@@ -45,6 +46,16 @@ public class Dashboard extends JFrame implements ActionListener{
         admin.add(addBorrower);
 
         setVisible(true);
+    }
+
+    private ActionListener openReceptionScreen() {
+        return new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                setVisible(false);
+                new Reception();
+            }
+        };
     }
 
     private ActionListener openEmployeeScreen() {
