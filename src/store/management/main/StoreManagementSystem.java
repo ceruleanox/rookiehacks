@@ -1,6 +1,7 @@
 package store.management.main;
 
 import store.management.system.Login;
+import store.management.system.Dashboard;
 
 import javax.swing.*;
 import java.awt.*;
