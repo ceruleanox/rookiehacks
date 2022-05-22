@@ -71,6 +71,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/store/management/system/AddItem.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/store/management/system/BorrowerInfo.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/store/management/system/ChooseCateogry.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/store/management/system/Login.java" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -110,7 +116,7 @@
       <recent name="D:\MohmadFaizan\Hackathon\Rookie\rookiehacks\libraries" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Reception">
+  <component name="RunManager" selected="Application.SearchItem">
     <configuration default="true" type="Applet" factoryName="Applet">
       <module name="" />
       <option name="MAIN_CLASS_NAME" />
@@ -136,8 +142,64 @@
       <Host>localhost</Host>
       <Port>5050</Port>
     </configuration>
-    <configuration name="Dashboard" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="store.management.system.Dashboard" />
+    <configuration name="AddItem" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="store.management.system.AddItem" />
+      <module name="RookieHacks" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="store.management.system.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ChooseCateogry" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="store.management.system.ChooseCateogry" />
+      <module name="RookieHacks" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="store.management.system.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ItemStatus" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="store.management.system.ItemStatus" />
+      <module name="RookieHacks" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="store.management.system.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Login" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="store.management.system.Login" />
+      <module name="RookieHacks" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="store.management.system.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Login" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="store.management.system.Login" />
       <module name="RookieHacks" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
@@ -261,19 +323,22 @@
     </configuration>
     <list>
       <item itemvalue="Application.Main" />
+      <item itemvalue="Application.ItemStatus" />
       <item itemvalue="Application.StoreManagementSystem (1)" />
       <item itemvalue="Application.addEmployees" />
-      <item itemvalue="Application.Dashboard" />
       <item itemvalue="Application.SearchItem" />
+      <item itemvalue="Application.AddItem" />
+      <item itemvalue="Application.ChooseCateogry" />
+      <item itemvalue="Application.Login" />
       <item itemvalue="Application.Reception" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Reception" />
-        <item itemvalue="Application.StoreManagementSystem (1)" />
         <item itemvalue="Application.SearchItem" />
-        <item itemvalue="Application.addEmployees" />
-        <item itemvalue="Application.Dashboard" />
+        <item itemvalue="Application.AddItem" />
+        <item itemvalue="Application.ChooseCateogry" />
+        <item itemvalue="Application.Login" />
+        <item itemvalue="Application.Reception" />
       </list>
     </recent_temporary>
   </component>
@@ -301,11 +366,15 @@
       <option name="presentableId" value="Default" />
       <updated>1359379246138</updated>
       <workItem from="1359379250712" duration="1302000" />
+      <workItem from="1653135303438" duration="10665000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
     <option name="totallyTimeSpent" value="1302000" />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
